@@ -1,0 +1,29 @@
+{
+  "name": "danverse-aurora-menu",
+  "version": "1.0.0",
+  "description": "DANVERSE Creative Strategy, Art Direction & Visual Performance Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "build": "echo 'Static site - no build process needed'",
+    "deploy": "echo 'Ready for deployment to any static hosting platform'"
+  },
+  "keywords": [
+    "danverse",
+    "creative-strategy",
+    "art-direction",
+    "visual-performance",
+    "aurora-menu",
+    "interactive-website"
+  ],
+  "author": "DANVERSE Team",
+  "license": "PROPRIETARY",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/DANVERSE01/danverse-aurora-menu.git"
+  },
+  "homepage": "https://danverse01.github.io/danverse-aurora-menu/",
+  "devDependencies": {
+    "serve": "^14.0.0"
+  }
+}

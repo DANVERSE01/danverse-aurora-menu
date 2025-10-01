@@ -1,0 +1,255 @@
+/* ========================================
+   DANVERSE Aurora Menu - Main Stylesheet
+   ======================================== */
+
+/* ==========================================================================
+   1. CSS RESET & BASE STYLES
+   ========================================================================== */
+
+* {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  box-sizing: border-box;
+}
+
+/* ==========================================================================
+   2. TYPOGRAPHY & FONTS
+   ========================================================================== */
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700");
+
+body {
+  font-family: "Montserrat", sans-serif;
+  overflow: hidden;
+  background: black;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================================================
+   3. LAYOUT & POSITIONING
+   ========================================================================== */
+
+.solar_systm {
+  transform-style: preserve-3d;
+  pointer-events: none;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+
+.solar {
+  position: absolute;
+  transform: rotatex(-20deg);
+  perspective: 800px;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+}
+
+/* ==========================================================================
+   4. LOGO & BRANDING
+   ========================================================================== */
+
+.logo {
+  color: white;
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 100;
+  letter-spacing: 4px;
+  z-index: 100;
+}
+
+.logo span {
+  font-size: 12px;
+  color: #f39041;
+  display: block;
+}
+
+/* ==========================================================================
+   5. PLANET SYSTEM
+   ========================================================================== */
+
+.planet {
+  height: 1200px;
+  width: 1200px;
+  border-radius: 600px;
+  background: red;
+  transition: transform 2.8s 0.23s cubic-bezier(0.33, 0, 0, 1), 
+              opacity 2s 0.8s, 
+              box-shadow 0s 0s;
+  background-size: 1140px 910px !important;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: auto;
+  bottom: -920px;
+  margin: auto;
+  transform: translateY(-50%);
+}
+
+/* Planet Animation */
+@keyframes planet {
+  from {
+    background-position-y: 0px;
+  }
+  to {
+    background-position-y: -1000px;
+  }
+}
+
+/* ==========================================================================
+   6. MOON SYSTEM
+   ========================================================================== */
+
+.moon {
+  height: 200px;
+  width: 200px;
+  border-radius: 600px;
+  background: red;
+  position: absolute;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  opacity: 0;
+  transition: all 0.6s 0.2s;
+}
+
+.moon h2 {
+  font-weight: 100;
+  font-size: 40px;
+  letter-spacing: 5px;
+  margin: 0;
+  position: relative;
+  top: -120px;
+}
+
+.moon h3 {
+  font-weight: 100;
+  font-size: 20px;
+  letter-spacing: 5px;
+  color: #fea082;
+  margin: 0;
+  position: relative;
+  top: -120px;
+}
+
+/* ==========================================================================
+   7. TRAJECTORY LINES
+   ========================================================================== */
+
+.trajectory {
+  border: 2px dashed white;
+  position: absolute;
+  border-radius: 3400px;
+  background: none !important;
+  z-index: -2;
+}
+
+/* Specific trajectory styles for each planet */
+.planet.neptune .trajectory.ner,
+.planet.neptune .trajectory.pro,
+.planet.neptune .trajectory.tri,
+.planet.uranus .trajectory.umb,
+.planet.uranus .trajectory.ari,
+.planet.uranus .trajectory.mir,
+.planet.saturn .trajectory.enc,
+.planet.saturn .trajectory.di,
+.planet.saturn .trajectory.ti,
+.planet.jupiter .trajectory.ga,
+.planet.jupiter .trajectory.eu,
+.planet.jupiter .trajectory.lop,
+.planet.mars .trajectory.p,
+.planet.mars .trajectory.d,
+.planet.earth .trajectory.m {
+  border: 2px dashed white;
+  position: absolute;
+  border-radius: 3400px;
+  background: none !important;
+  z-index: -2;
+}
+
+/* ==========================================================================
+   8. OVERLAY SYSTEM
+   ========================================================================== */
+
+.overlay {
+  border-bottom: 1020px solid black;
+  width: 1800px;
+  height: 620px;
+  position: absolute;
+  left: -303px;
+  top: -240px;
+  opacity: 1;
+  border-radius: 100%;
+  z-index: 0;
+  box-shadow: 0px -190px 215px 110px black inset;
+  transform: translateY(-50%);
+  margin: auto;
+}
+
+/* ==========================================================================
+   9. RESPONSIVE DESIGN
+   ========================================================================== */
+
+@media (max-width: 768px) {
+  .logo {
+    font-size: 12px;
+    letter-spacing: 2px;
+  }
+  
+  .planet {
+    height: 800px;
+    width: 800px;
+    border-radius: 400px;
+  }
+  
+  .moon {
+    height: 150px;
+    width: 150px;
+  }
+  
+  .moon h2 {
+    font-size: 30px;
+  }
+  
+  .moon h3 {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .logo {
+    font-size: 10px;
+    letter-spacing: 1px;
+  }
+  
+  .planet {
+    height: 600px;
+    width: 600px;
+    border-radius: 300px;
+  }
+  
+  .moon {
+    height: 120px;
+    width: 120px;
+  }
+  
+  .moon h2 {
+    font-size: 24px;
+  }
+  
+  .moon h3 {
+    font-size: 14px;
+  }
+}
